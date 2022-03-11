@@ -1,0 +1,197 @@
+{
+	"info": {
+		"_postman_id": "72b0fbd7-95dc-4c7c-b5bd-dbe3073be72d",
+		"name": "nodejs-express-mysql",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Retrieve all Tutorials using GET /tutorials Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve a single Tutorial by id using GET /tutorials/:id Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find Tutorials by title using GET /tutorials Api",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials?title=node",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "node"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Find all published Tutorials",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/published",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"published"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new Tutorial using POST /tutorials Api",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Node.js Basics\",\r\n    \"description\": \"Tut#1 Description\",\r\n    \"published\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a Tutorial using PUT /tutorials/:id Api",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Node.js Basics (Updated)\",\r\n    \"description\": \"Tut#1 Description (Updated)\",\r\n    \"published\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete all Tutorials using DELETE /tutorials Api",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a Tutorial using DELETE /tutorials/:id Api",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/tutorials/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"tutorials",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
